@@ -1,0 +1,29 @@
+let countdownDate = new Date("Dec 31, 2025 00:00:00").getTime();
+let countdownTimer = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = countdownDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById("countdown").innerHTML = "LAUNCH!";
+    }
+}, 1000);
+
+window.addEventListener("load", () => {
+    const container = document.querySelector(".wip-container");
+    container.style.transform = "scale(1.05)";
+    setTimeout(() => {
+        container.style.transform = "scale(1)";
+        container.style.transition = "transform 0.6s ease";
+    }, 200);
+
+    
+});
