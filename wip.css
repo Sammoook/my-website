@@ -33,6 +33,23 @@ h1 {
     margin-top: 10px;
 }
 
+h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #a0aec0; /* lichtgrijs, past bij je stijl */
+}
+
+ul {
+  list-style-type: disc; /* bullet points */
+  padding-left: 20px;
+  margin-top: 15px;
+  color: #cbd5e1; /* zachte kleur */
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
 
 .gear {
     font-size: 60px;
